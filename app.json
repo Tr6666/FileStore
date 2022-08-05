@@ -7,10 +7,10 @@
     "Store",
     "Files"
   ],
-  "logo": "https://telegra.ph/file/bdd3352951be090a56590.jpg",
-  "success_url": "https://telegram.dog/filestore_Nsbot",
-  "website": "https://github.com/Ns-Bots/TG-File-Store",
-  "repository": "https://github.com/Ns-Bots/TG-File-Store",
+  "logo": "https://telegra.ph/file/a31837accd94caad73204.jpg",
+  "success_url": "https://telegram.me/directtamilmoviesbot",
+  "website": "https://github.com/kevinnadar22/TG-File-Store",
+  "repository": "https://github.com/kevinnadar22/TG-File-Store",
   "env": {
     "WEBHOOK": {
       "description": "Setting this to ANYTHING will enable webhooks when in env mode",
@@ -29,10 +29,22 @@
       "value": ""
     },
     "UPDATE_CHANNEL": {
-      "description": "Your bot updates channel like Ns_bot_updates (username without @ for forcesub). (Leave empty it you don't want to add)",
+      "description": "Your bot updates channel like t2links (username without @ for forcesub). (Leave empty it you don't want to add)",
       "value": "",
       "required": false
     },
+
+    
+    "SITE": {
+      "description": "Your preferred shortner site Eg: droplink.co. Avoid https:// or http://.",
+      "value": "",
+      "required": false
+    }, 
+    "API_KEY": {
+      "description": "You API_ID from https://droplink.co/member/tools/api",
+      "value": "",
+      "required": false
+    },     
     "OWNER_ID": {
       "description": "give your telegram user id here",
       "value": ""
@@ -40,9 +52,23 @@
     "API_HASH": {
       "description": "Get this value from https://my.telegram.org",
       "value": ""
+    },
+    "AUTH_USERS": {
+      "description": "Add authorized userids if u are using IS_PRIVATE",
+      "value": "",
+      "required": false
+    },
+    "IS_PRIVATE": {
+      "description": "Add True if you want to use as Private",
+      "value": "",
+      "required": false
     }
   },
   "addons": [
+  {
+    "plan": "heroku-postgresql",
+    "options": {"version": "12"}
+  }
   ],
   "buildpacks": [{
     "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
